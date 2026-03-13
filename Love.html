@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Love ❤️</title>
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+  font-family:Arial, Helvetica, sans-serif;
+  overflow:hidden;
+}button{ padding:15px 30px; font-size:20px; border:none; border-radius:30px; background:#ff4b6e; color:white; cursor:pointer; box-shadow:0 10px 20px rgba(0,0,0,0.2); }
+
+.popup{ position:fixed; top:50%; left:50%; transform:translate(-50%,-50%) scale(0); width:320px; background:white; border-radius:20px; text-align:center; padding:30px; box-shadow:0 20px 40px rgba(0,0,0,0.3); transition:0.4s; }
+
+.popup.active{ transform:translate(-50%,-50%) scale(1); }
+
+.heart{ font-size:50px; animation:beat 1s infinite; }
+
+@keyframes beat{ 0%{transform:scale(1);} 50%{transform:scale(1.3);} 100%{transform:scale(1);} }
+
+h1{ color:#ff4b6e; }
+
+video{ width:100%; border-radius:12px; margin-top:10px; }
+
+.close{ margin-top:15px; background:#333; } </style>
+
+</head>
+<body><button onclick="openPopup()">Click Me ❤️</button>
+
+<div class="popup" id="popup">
+  <div class="heart">❤️</div>
+  <h1>I Love You</h1>
+  <p>You make my world beautiful.</p>  <video autoplay loop muted>
+    <source src="https://media.tenor.com/2roX3uxz_68AAAAC/love.gif" type="video/mp4">
+  </video>  <br>
+  <button class="close" onclick="closePopup()">Close</button>
+</div><script>
+function openPopup(){
+  document.getElementById("popup").classList.add("active");
+}
+
+function closePopup(){
+  document.getElementById("popup").classList.remove("active");
+}
+</script></body>
+</html>
